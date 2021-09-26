@@ -14,3 +14,16 @@ It will return a list which contains
 <b>ans[2]</b> -> Netname of the track
 
 <b>ans[3]</b> -> Track width in mm
+
+
+## get_via_list(filename)
+This function will list all the via in the given board.
+
+It will return a list which contains 
+
+<b>ans[0]</b> -> VIA width in mm
+
+<b>ans[1]</b> -> VIA drill in mm
+
+<b>ans[2]</b> -> Netname of the VIA
+
