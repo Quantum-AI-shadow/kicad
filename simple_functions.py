@@ -33,6 +33,15 @@ def get_via_list(filename):
             via_net_list.append(via.GetNetname())
     return [via_width_list, via_drill_list, via_net_list]
 
+def get_component(filename):
+    comp_list = []
+    board = pcbnew.LoadBoard(filename)
+    for com in board.GetModules():
+        print("Ref: ", com.GetReference())
+        print("Position: ", ToMM(com.GetPosition()))
+        print("Angle: ", com.GetOrientation()/10)
+        print("Flipped: ", com.IsFlipped())
+
 ans = get_track_list("/home/quantum/Desktop/kicad/arduno_mini/arduno_mini.kicad_pcb")
 for i in ans:
     print(i)
@@ -41,3 +50,4 @@ ans = get_via_list("/home/quantum/Desktop/kicad/arduno_mini/arduno_mini.kicad_pc
 for i in ans:
     print(i)
     print()
+ans = get_component("/home/quantum/Desktop/kicad/arduno_mini/arduno_mini.kicad_pcb")
