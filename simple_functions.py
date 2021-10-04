@@ -27,6 +27,9 @@ def get_via_list(filename):
     tracks = board.GetTracks()
     for via in tracks:
         if(type(via) is pcbnew.VIA):
+            print("Width:", via.GetWidth()/1e6)
+            print("Drill:",via.GetDrill()/1e6)
+            print("Netname:",via.GetNetname())
             via_list.append(via)
             via_width_list.append(via.GetWidth()/1e6)
             via_drill_list.append(via.GetDrill()/1e6)
