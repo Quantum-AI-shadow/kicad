@@ -40,3 +40,19 @@ def addTrack(x1, y1, x2, y2, trackWidth, netName, layerName, refresh = 1):
     board.Add(track)
     if(refresh == 1):
         pcbnew.Refresh()
+
+def addZone(points, layerName, netName, padConnection, refresh = 1): #padConnection is thermal/solid
+    zone = pcbnew.ZONE_CONTAINER(board)
+    nets = board.GetNetsByName()
+    netCode = nets.find(netName).value()[1].GetNet()
+    zone.SetNetCode(netCode)
+    zone.SetTimeStamp(420)
+    zone.SetLayer(getLayerID(layerName))
+    zone.SetPadConnection(padConnection)
+    wx_vector = pcbnew.wxPoint_Vector(0)
+    for point in points:
+        pcbnew.wxPoint_Vector.append(wx_vector, pcbnew.wxPoint(point[0]*1e6, point[1]*1e6))
+    zone.AddPolygon(wx_vector)
+    board.Add(zone)
+    if(refresh == 1):
+        pcbnew.Refresh()
