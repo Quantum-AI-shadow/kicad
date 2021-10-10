@@ -2,30 +2,13 @@
 
 This repo will be used to create small functions in kicad pcbnew
 
-## get_track_list(filename)
-This function will list all the tracks in the given board.
+## create.py:
 
-It will return a list which contains 
+This contains definitions for creating via, track and zones.
 
-<b>ans[0]</b> -> Track start and end point (x,y)
+## getViaList.py
 
-<b>ans[1]</b> -> Layer name in which track is present
-
-<b>ans[2]</b> -> Netname of the track
-
-<b>ans[3]</b> -> Track width in mm
-
-
-## get_via_list(filename)
-This function will list all the via in the given board.
-
-It will return a list which contains 
-
-<b>ans[0]</b> -> VIA width in mm
-
-<b>ans[1]</b> -> VIA drill in mm
-
-<b>ans[2]</b> -> Netname of the VIA
+This contains function to list all the via present in the board.
 
 ## Tutorial:
 https://crypticquantum.wordpress.com/
