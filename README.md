@@ -36,6 +36,12 @@ This is same as report, but there is a file dialog to choose pcb board file.
 
 This is to collect some usefule functions in kicad scripting.
 
+## Plugins
+
+To use these plugins, save the .py file in /usr/share/kicad/scripting/plugins/
+
+Refresh external plugins in kicad pcbnew
+
 # Tutorial:
 https://crypticquantum.wordpress.com/
 
