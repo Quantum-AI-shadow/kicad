@@ -28,7 +28,7 @@ Width, Drill, Position, Net name
 
 Reference, Position, Value, Flipped, Angle
 
-## reoprt_tk.py
+## report_tk.py
 
 This is same as report, but there is a file dialog to choose pcb board file.
 
