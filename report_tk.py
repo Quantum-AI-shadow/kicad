@@ -1,8 +1,11 @@
 import pcbnew
 import csv
+import tkinter as tk
+from tkinter import filedialog
 
+root = tk.Tk()
 #board      = pcbnew.GetBoard()
-filename    = '/home/quantum/Desktop/kicad/something.kicad_pcb'
+filename    = filedialog.askopenfilename(filetypes=[("PCB file", ".kicad_pcb")])
 board       = pcbnew.LoadBoard(filename)
 csvfilename = 'report.csv'
 csvfile     = open(csvfilename, 'w')
@@ -48,3 +51,4 @@ for comp in board.GetModules():
     csvwriter.writerow([comp.GetReference(), pcbnew.ToMM(comp.GetPosition()), comp.GetValue(), comp.IsFlipped(), comp.GetOrientation()/10])
 
 csvfile.close()
+root.destroy()
