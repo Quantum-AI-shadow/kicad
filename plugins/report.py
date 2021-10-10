@@ -10,7 +10,7 @@ class Report(pcbnew.ActionPlugin):
         self.description = "Create a csv file with track, via and component report"
         
     def Run(self):
-        board      = pcbnew.GetBoard()
+        board       = pcbnew.GetBoard()
         csvfilename = 'report.csv'
         csvfile     = open(csvfilename, 'w')
         csvwriter   = csv.writer(csvfile)
