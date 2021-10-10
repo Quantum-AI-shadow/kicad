@@ -36,7 +36,7 @@ This is same as report, but there is a file dialog to choose pcb board file.
 
 This is to collect some usefule functions in kicad scripting.
 
-## Plugins
+# Plugins
 
 To use these plugins, save the .py file in /usr/share/kicad/scripting/plugins/
 
