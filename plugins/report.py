@@ -23,10 +23,10 @@ class Report(pcbnew.ActionPlugin):
         
         csvwriter.writerow([])
         csvwriter.writerow(["VIA LIST"])
-        csvwriter.writerow(["Width", "Drill", "Position", "Net Name"])
+        csvwriter.writerow(["Type", "Width", "Drill", "Position", "Net Name"])
         for via in board.GetTracks():
             if(type(via) == pcbnew.VIA):
-                csvwriter.writerow([via.GetWidth()/1e6, via.GetDrill()/1e6, pcbnew.ToMM(via.GetPosition()), via.GetNetname()])
+                csvwriter.writerow(["THROUGH", via.GetWidth()/1e6, via.GetDrill()/1e6, pcbnew.ToMM(via.GetPosition()), via.GetNetname()])
         
         csvwriter.writerow([])
         csvwriter.writerow(["COMP LIST"])

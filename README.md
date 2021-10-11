@@ -42,6 +42,14 @@ To use these plugins, save the .py file in /usr/share/kicad/scripting/plugins/
 
 Refresh external plugins in kicad pcbnew
 
+## report
+
+This plugin will generate the report which will contain track, via and component details
+
+## align
+
+This will align the selected component to 90 degree 
+
 # Tutorial:
 https://crypticquantum.wordpress.com/
 
