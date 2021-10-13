@@ -50,6 +50,10 @@ This plugin will generate the report which will contain track, via and component
 
 This will align the selected component to 90 degree 
 
+## Pin report
+
+This will generate a csv file with pin reference ID, Pin name, X and Y position with netname.
+
 # Tutorial:
 https://crypticquantum.wordpress.com/
 
