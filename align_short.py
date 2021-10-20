@@ -34,19 +34,30 @@ def addMenu():
     pcbwindow  = list(filter(lambda w: 1, windows))
     menuBar = pcbwindow[2].MenuBar
     
-    my_id = wx.NewId()
-    entry = wx.AcceleratorEntry(wx.ACCEL_CTRL, ord('1'), my_id)
-    menuBar.Bind(wx.EVT_MENU, Report.Align, id=my_id)
-    toolsMenu = menuBar.GetMenu(menuBar.FindMenu("Tools"))
-    tools = toolsMenu.Append(my_id, "Align")
-    tools.SetAccel(entry)
+    def add_fun(funName, shortcut, name):
+        my_id = wx.NewId()
+        entry = wx.AcceleratorEntry(wx.ACCEL_CTRL, ord(shortcut), my_id)
+        menuBar.Bind(wx.EVT_MENU, funName, id=my_id)
+        toolsMenu = menuBar.GetMenu(menuBar.FindMenu("Tools"))
+        tools = toolsMenu.Append(my_id, name)
+        tools.SetAccel(entry)
+    
+    add_fun(Report.Align, '1', 'Align')    
+    add_fun(Report.Align90, '2', 'Align90')    
 
-    my_id = wx.NewId()
-    entry = wx.AcceleratorEntry(wx.ACCEL_CTRL, ord('2'), my_id)
-    menuBar.Bind(wx.EVT_MENU, Report.Align90, id=my_id)
-    toolsMenu = menuBar.GetMenu(menuBar.FindMenu("Tools"))
-    tools = toolsMenu.Append(my_id, "Align90")
-    tools.SetAccel(entry)
+    #my_id = wx.NewId()
+    #entry = wx.AcceleratorEntry(wx.ACCEL_CTRL, ord('1'), my_id)
+    #menuBar.Bind(wx.EVT_MENU, Report.Align, id=my_id)
+    #toolsMenu = menuBar.GetMenu(menuBar.FindMenu("Tools"))
+    #tools = toolsMenu.Append(my_id, "Align")
+    #tools.SetAccel(entry)
+
+    #my_id = wx.NewId()
+    #entry = wx.AcceleratorEntry(wx.ACCEL_CTRL, ord('2'), my_id)
+    #menuBar.Bind(wx.EVT_MENU, Report.Align90, id=my_id)
+    #toolsMenu = menuBar.GetMenu(menuBar.FindMenu("Tools"))
+    #tools = toolsMenu.Append(my_id, "Align90")
+    #tools.SetAccel(entry)
 
 addMenu()
 
