@@ -52,7 +52,11 @@ This will align the selected component to 90 degree
 
 ## Pin report
 
-This will generate a csv file with pin reference ID, Pin name, X and Y position with netname.
+This will generate a csv file with pin reference ID, Pin name, X and Y position with netname
+
+## GUI
+
+This will generate a small UI for shortcuts. You can use it in always on top mode(Linux) and click for the shortcut
 
 # Tutorial:
 https://crypticquantum.wordpress.com/
