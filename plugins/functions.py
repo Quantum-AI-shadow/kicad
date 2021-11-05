@@ -18,7 +18,7 @@ class fun():
         board = pcbnew.GetBoard()
         for comp in board.GetModules():
             if(comp.IsSelected()):
-                comp.SetOrientation(0)
+                comp.SetOrientation(900)
         pcbnew.Refresh()
 
     def pin_report(self):
