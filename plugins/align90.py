@@ -8,6 +8,7 @@ class Report(pcbnew.ActionPlugin):
         self.name        = "Align"
         self.category    = "Modify PCB"
         self.description = "Align the selected component to 0 degree"
+        self.show_toolbar_button = True
         
     def Run(self):
         board       = pcbnew.GetBoard()
